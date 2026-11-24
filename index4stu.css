@@ -1,0 +1,249 @@
+/* ===============================
+   GLOBAL DESIGN SYSTEM
+================================= */
+
+:root {
+  --primary: #0f172a;       /* dark navy */
+  --secondary: #1e293b;
+  --accent: #2563eb;        /* blue */
+  --light: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #1e293b;
+  --text-light: #64748b;
+  --border-radius: 12px;
+  --shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+/* ===============================
+   RESET & BASE
+================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  margin: 0;
+  background: var(--light);
+  color: var(--text-dark);
+  line-height: 1.7;
+}
+
+h1, h2, h3 {
+  margin-top: 0;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  color: var(--accent);
+  transition: 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ===============================
+   HEADER
+================================= */
+
+header {
+  background: var(--primary);
+  color: white;
+  padding: 5px 5px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+}
+
+/* ===============================
+   NAVIGATION
+================================= */
+
+nav {
+  background: var(--secondary);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav > a,
+.dropbtn {
+  color: white;
+  /*font-weight: 500;*/
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.7s ease;
+}
+
+nav > a:hover,
+.dropbtn:hover {
+  background: var(--accent);
+}
+
+/* Dropdown */
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 220px;
+  box-shadow: var(--shadow);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  top: 38px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 12px 15px;
+  color: var(--text-dark);
+  font-size: 14px;
+}
+
+.dropdown-content a:hover {
+  background: linear-gradient(135deg, var(--accent), #2196f3);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* ===============================
+   MAIN LAYOUT
+================================= */
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+section {
+  background: var(--card-bg);
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+section h2 {
+  border-left: 5px solid var(--accent);
+  padding-left: 12px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* ===============================
+   TABLE STYLING
+================================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+
+td {
+  padding: 8px 5px;
+  vertical-align: top;
+}
+
+tr:not(:last-child) td {
+  border-bottom: 1px solid #eee;
+}
+
+/* ===============================
+   LISTS
+================================= */
+
+ul, ol {
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* ===============================
+   SOCIAL ICON BAR
+================================= */
+
+.social-links {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.social-links a {
+  margin: 0 8px;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+.social-links a:hover {
+  color: var(--primary);
+}
+
+.social-links u {
+  margin: 0 8px;
+  font-size: 15px;
+  color: var(--accent);
+}
+
+.social-links u:hover {
+  color: var(--primary);
+}
+
+
+/* ===============================
+   FOOTER
+================================= */
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--primary);
+  color: white;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+/* ===============================
+   RESPONSIVE
+================================= */
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  section {
+    padding: 20px;
+  }
+
+  header h1 {
+    font-size: 22px;
+  }
+}
